@@ -2,6 +2,7 @@ package test;
 
 import java.time.*;
 
+
 public class Test {
 	
 	public static void main(String[] args) {
@@ -25,10 +26,11 @@ public class Test {
 				System.out.print(" ");
 			}
 			date = date.plusDays(1);
-			if(date.getDayOfWeek().getValue() == 1) {
-			System.out.println();
+			if (date.getDayOfWeek().getValue() == 1) {
+				System.out.println();
 			}
 		}
+
 		if (date.getDayOfWeek().getValue() != 1) {
 			System.out.println();
 		}

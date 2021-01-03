@@ -28,6 +28,9 @@ public class Counter {
 		
 		heads.increment();
 		heads.increment();
+		tails.increment();
+		
+		StdOut.println(heads + " " + tails);
 		StdOut.println(heads.tally() + tails.tally());
 	}
 }

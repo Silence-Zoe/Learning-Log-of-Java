@@ -2,7 +2,7 @@ package test;
 
 import edu.princeton.cs.algs4.*;
 
-public class Selection {
+public class MergeBU {
 	public static void merge(Comparable[] a, int lo, int mid, int hi) {
 		int i = lo, j = mid + 1;
 		

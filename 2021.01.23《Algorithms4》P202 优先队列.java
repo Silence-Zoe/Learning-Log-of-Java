@@ -2,7 +2,7 @@ package test;
 
 import edu.princeton.cs.algs4.*;
 
-public class MaxPQ<Key extends  Comparable<Key>> {
+public class MaxPQ<Key extends Comparable<Key>> {
 	private Key[] pq;
 	private int N = 0;
 	

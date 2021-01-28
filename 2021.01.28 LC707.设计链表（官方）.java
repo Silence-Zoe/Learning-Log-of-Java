@@ -36,16 +36,16 @@ class MyLinkedList {
 	
     public void addAtIndex(int index, int val) {
         if (index > size) {
-        return;
+            return;
         }
         if (index < 0) {
-        index = 0;
+            index = 0;
         }
         ++size;
         ListNode pred = head;
 	    
         for (int i = 0; i < index; ++i) {
-        pred = pred.next;
+            pred = pred.next;
         }
 	
         ListNode toAdd = new ListNode(val);

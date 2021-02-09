@@ -1,6 +1,6 @@
 class Solution {
     public int reverse(int x) {
-        double ans = 0;
+        double ans = 0;	//使用了double来辅助检查溢出，实际上不合题意
         boolean flag = false;
         if (x < 0) {
             x = -x;

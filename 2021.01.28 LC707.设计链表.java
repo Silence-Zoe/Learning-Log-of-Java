@@ -1,3 +1,7 @@
+/**
+ * 执行用时：12 ms，在所有 Java 提交中击败了 69.77% 的用户
+ * 内存消耗：39 MB，在所有 Java 提交中击败了 81.01% 的用户
+ */
 class ListNode {
         int val;
         ListNode next;

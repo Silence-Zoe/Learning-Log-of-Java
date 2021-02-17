@@ -12,7 +12,7 @@ class Solution {
                     return new int[]{i + 1, mid + 1};
                 } else if (numbers[mid] > target - numbers[i]) {
                     high = mid - 1;
-                } else{
+                } else {
                     low = mid + 1;
                 }
             }

@@ -1,6 +1,6 @@
 /**
- * 执行用时：0 ms，在所有 Java 提交中击败了 100.00% 的用户
- * 内存消耗：36.7 MB，在所有 Java 提交中击败了 46.13% 的用户
+ * 执行用时：1 ms，在所有 Java 提交中击败了 42.30% 的用户
+ * 内存消耗：36.4 MB，在所有 Java 提交中击败了 96.51% 的用户
  */
 class Solution {
     public List<Integer> inorderTraversal(TreeNode root) {

@@ -1,12 +1,6 @@
 /**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- * }
+ * 执行用时：0 ms，在所有 Java 提交中击败了 100.00% 的用户
+ * 内存消耗：38.6 MB，在所有 Java 提交中击败了 8.52% 的用户
  */
 class Solution {
     public ListNode reverseList(ListNode head) {
@@ -54,3 +48,6 @@ class Solution {
         return null;    //这句实际上不会走到，但必须要有返回值，只好写上
     }
 }
+/**
+ * 反转一个单链表。
+ */

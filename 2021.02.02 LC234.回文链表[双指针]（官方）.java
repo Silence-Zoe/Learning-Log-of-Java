@@ -1,3 +1,7 @@
+/**
+ * 执行用时：6 ms，在所有 Java 提交中击败了 39.90% 的用户
+ * 内存消耗：48.2 MB，在所有 Java 提交中击败了 49.78% 的用户
+ */
 class Solution {
     public boolean isPalindrome(ListNode head) {
         if (head == null) {
@@ -40,3 +44,6 @@ class Solution {
         return slow;
     }
 }
+/**
+ * 请判断一个链表是否为回文链表。
+ */

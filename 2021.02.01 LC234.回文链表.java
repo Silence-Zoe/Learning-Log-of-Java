@@ -1,14 +1,7 @@
 /**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- * }
+ * 执行用时：5 ms，在所有 Java 提交中击败了 48.35% 的用户
+ * 内存消耗：52.1 MB，在所有 Java 提交中击败了 10.80% 的用户
  */
-import java.util.ArrayList; 
 class Solution {
     public boolean isPalindrome(ListNode head) {
         if (head == null || head.next == null) {
@@ -32,3 +25,6 @@ class Solution {
         return true;
     }
 }
+/**
+ * 请判断一个链表是否为回文链表。
+ */

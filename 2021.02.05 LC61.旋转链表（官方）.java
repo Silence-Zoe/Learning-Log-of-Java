@@ -1,21 +1,36 @@
+/**
+ * 执行用时：0 ms，在所有 Java 提交中击败了 100.00% 的用户
+ * 内存消耗：37.9 MB，在所有 Java 提交中击败了 45.50% 的用户
+ */
 class Solution {
     public ListNode rotateRight(ListNode head, int k) {
-        if (head == null || head.next == null) {
+        if (k == 0 || head == null || head.next == null) {
             return head;
         }
-        ListNode old_tail = head;
-        int n;
-        for (n = 1; old_tail.next != null; n++) {
-            old_tail = old_tail.next;
+        int n = 1;
+        ListNode iter = head;
+        while (iter.next != null) {
+            iter = iter.next;
+            n++;
         }
-        old_tail.next = head;
-
-        ListNode new_tail = head;
-        for (int i = 0; i < n - k % n - 1; i++) {
-            new_tail = new_tail.next;
+        int add = n - k % n;
+        if (add == n) {
+            return head;
         }
-        ListNode new_head = new_tail.next;
-        new_tail.next = null;
-        return new_head;
+        iter.next = head;
+        while (add-- > 0) {
+            iter = iter.next;
+        }
+        ListNode ret = iter.next;
+        iter.next = null;
+        return ret;
     }
 }
+/**
+ * 给你一个链表的头节点 head ，旋转链表，将链表每个节点向右移动 k 个位置。
+ * --------------------------------------------------
+ * 提示：
+ * 链表中节点的数目在范围 [0, 500] 内
+ * -100 <= Node.val <= 100
+ * 0 <= k <= 2 * 10^9
+ */

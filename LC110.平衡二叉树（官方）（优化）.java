@@ -1,26 +1,23 @@
 /**
  * 执行用时：1 ms，在所有 Java 提交中击败了 99.99% 的用户
- * 内存消耗：38.5 MB，在所有 Java 提交中击败了 63.19% 的用户
+ * 内存消耗：38.6 MB，在所有 Java 提交中击败了 35.65% 的用户
  */
 class Solution {
     public boolean isBalanced(TreeNode root) {
-        if (root == null) {
-            return true;
-        }
-
-        if (Math.abs(getHeight(root.left) - getHeight(root.right)) < 2) {
-            return isBalanced(root.left) && isBalanced(root.right);
-        } else {
-            return false;
-        }
+        return height(root) >= 0;
     }
 
-    private int getHeight(TreeNode root) {
+    public int height(TreeNode root) {
         if (root == null) {
             return 0;
         }
-
-        return 1 + Math.max(getHeight(root.left), getHeight(root.right));
+        int leftHeight = height(root.left);
+        int rightHeight = height(root.right);
+        if (leftHeight == -1 || rightHeight == -1 || Math.abs(leftHeight - rightHeight) > 1) {
+            return -1;
+        } else {
+            return Math.max(leftHeight, rightHeight) + 1;
+        }
     }
 }
 /**

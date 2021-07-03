@@ -1,20 +1,28 @@
 /**
- * 执行用时：0 ms，在所有 Java 提交中击败了 100.00% 的用户
- * 内存消耗：38.2 MB，在所有 Java 提交中击败了 34.23% 的用户
+ * 执行用时：2 ms，在所有 Java 提交中击败了 27.18% 的用户
+ * 内存消耗：38.3 MB，在所有 Java 提交中击败了 9.62% 的用户
  */
 class Solution {
+    private List<Integer> s = new ArrayList<>();  
     public boolean isValidBST(TreeNode root) {
-        return isValidBST(root, Long.MIN_VALUE, Long.MAX_VALUE);
-    }
-
-    public boolean isValidBST(TreeNode node, long lower, long upper) {
-        if (node == null) {
+        if (root == null) {
             return true;
         }
-        if (node.val <= lower || node.val >= upper) {
-            return false;
+        travel(root);
+        for (int i = 1; i < s.size(); i++) {
+            if (s.get(i) <= s.get(i - 1)) {
+                return false;
+            }
         }
-        return isValidBST(node.left, lower, node.val) && isValidBST(node.right, node.val, upper);
+        return true;
+    }
+
+    private void travel(TreeNode root) {
+        if (root != null) {
+            travel(root.left);
+            s.add(root.val);
+            travel(root.right);
+        }
     }
 }
 /**

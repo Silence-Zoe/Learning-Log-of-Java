@@ -14,7 +14,7 @@ class Quick3way {
             int cmp = a[i].compareTo(v);
             if (cmp < 0) {
                 exch(a, lt++, i++);
-            } else if (emp > 0) {
+            } else if (cmp > 0) {
                 exch(a, i, gt--);
             } else {
                 i++;
